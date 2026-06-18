@@ -68,4 +68,57 @@ public class app extends Frame{
         Button b1=new Button("Show");
         b1.setBounds(500,670,50,25);
         add(b1);
+
+        cg=new CheckboxGroup();
+        rb1=new Checkbox("Male",cg,false);
+        rb1.setBounds(270,505,100,40);
+        add(rb1);
+        rb2=new Checkbox("Female",cg,false);
+        rb2.setBounds(370,505,100,40);
+        add(rb2);
+        
+        c1=new Choice();
+        c1.addItem("BTech");
+        c1.addItem("BE");
+        c1.addItem("BSc");
+        c1.addItem("Bcom");
+        c1.addItem("BBA");
+        c1.addItem("BCA");
+        c1.addItem("Others");
+        c1.setBounds(270,608,70,20);
+        add(c1);
+
+        c2=new Choice();
+        c2.addItem("25");
+        c2.addItem("26");
+        c2.addItem("27");
+        c2.addItem("28");
+        c2.addItem("29");
+        c2.addItem("30");
+        c2.addItem("31");
+        c2.addItem("32");
+        c2.addItem("33");
+        c2.addItem("34");
+        c2.addItem("35");
+        c2.setBounds(270,408,70,20);
+        add(c2);
+
+        MenuBar mb=new MenuBar();
+        Menu fm=new Menu("File");
+        m1=new MenuItem("New");
+        m2=new MenuItem("Open");
+        m3=new MenuItem("Save");
+        m4=new MenuItem("Exit");
+
+        m1.addActionListener(new New());
+        fm.add(m1);
+        m2.addActionListener(new Open());
+        fm.add(m2);
+        m3.addActionListener(new Save());
+        fm.add(m3);
+        m4.addActionListener(new Exit());
+        fm.add(m4);
+        mb.add(fm);
+        setMenuBar(mb);
+
 }
